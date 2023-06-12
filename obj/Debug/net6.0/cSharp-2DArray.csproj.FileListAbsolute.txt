@@ -1,0 +1,15 @@
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-2DArray\cSharp-2DArray\bin\Debug\net6.0\cSharp-2DArray.exe
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-2DArray\cSharp-2DArray\bin\Debug\net6.0\cSharp-2DArray.deps.json
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-2DArray\cSharp-2DArray\bin\Debug\net6.0\cSharp-2DArray.runtimeconfig.json
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-2DArray\cSharp-2DArray\bin\Debug\net6.0\cSharp-2DArray.dll
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-2DArray\cSharp-2DArray\bin\Debug\net6.0\cSharp-2DArray.pdb
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-2DArray\cSharp-2DArray\obj\Debug\net6.0\cSharp-2DArray.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-2DArray\cSharp-2DArray\obj\Debug\net6.0\cSharp-2DArray.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-2DArray\cSharp-2DArray\obj\Debug\net6.0\cSharp-2DArray.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-2DArray\cSharp-2DArray\obj\Debug\net6.0\cSharp-2DArray.AssemblyInfo.cs
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-2DArray\cSharp-2DArray\obj\Debug\net6.0\cSharp-2DArray.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-2DArray\cSharp-2DArray\obj\Debug\net6.0\cSharp-2DArray.dll
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-2DArray\cSharp-2DArray\obj\Debug\net6.0\refint\cSharp-2DArray.dll
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-2DArray\cSharp-2DArray\obj\Debug\net6.0\cSharp-2DArray.pdb
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-2DArray\cSharp-2DArray\obj\Debug\net6.0\cSharp-2DArray.genruntimeconfig.cache
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp-2DArray\cSharp-2DArray\obj\Debug\net6.0\ref\cSharp-2DArray.dll
