@@ -5,6 +5,7 @@
         static void Main(string[] args)
         {
             calculateTheSumOfAllElements();
+            FindTheAverageOfEachRow();
             //Example of 2d- Array
             //int[,] my2DArray = new int[3, 2];
             //my2DArray[0, 0] = 00;
@@ -38,12 +39,11 @@
         static void calculateTheSumOfAllElements()
         {
             // Declare a 2D array of integers
-            int[,] array = { { 1, 2, 3 }, { 4, 5, 6 } };
+            int[,] array = { { 5, 6, 10 }, { 9, 8, 4 } };
 
-            // Initialize a variable to store the sum
             int sum = 0;
 
-            // Loop through the rows and columns of the array
+            // First loop
             for (int i = 0; i < array.GetLength(0); i++)
             {
                 for (int j = 0; j < array.GetLength(1); j++)
@@ -53,9 +53,37 @@
                 }
             }
 
-            // Display the sum as the output
-            Console.WriteLine("The sum of all the elements in the array is " + sum);
+            // Display the sum
+            Console.WriteLine("The sum of all the elements in the 2D-Array is " + sum);
+        }
+
+        //Write a program that takes a 2D array of integers as input and calculates the average value for each row. Display the average value of each row as the output.
+        static void FindTheAverageOfEachRow()
+        {
+            int[,] array = { { 5, 6, 10 }, { 9, 8, 4 } };
+
+
+
+            // First loop
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                int sum = 0;
+                int count = 0;
+
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    // Add the current element to the sum
+                    sum += array[i, j];
+                    count++; //Add count 
+                }
+                double average = (double)sum / count;
+                // Display the average of each row 
+                Console.WriteLine("The average of each row in the 2D-Array: ");
+                Console.WriteLine("The average for row {0} is {1}", i + 1, average);
+            }
+
         }
     }
+    
 }
     
