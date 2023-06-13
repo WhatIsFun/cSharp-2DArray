@@ -1,88 +1,134 @@
-﻿namespace cSharp_2DArray
+﻿using System;
+
+namespace cSharp_2DArray
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            calculateTheSumOfAllElements();
-            FindTheAverageOfEachRow();
-            //Example of 2d- Array
-            //int[,] my2DArray = new int[3, 2];
-            //my2DArray[0, 0] = 00;
-            //my2DArray[0, 1] = 01;
-            //my2DArray[1, 0] = 10;
-            //my2DArray[1, 1] = 11;
-            //my2DArray[2, 0] = 20;
-            //my2DArray[2, 1] = 21;
-            //Console.WriteLine(my2DArray.Length);
-            //for (int i = 0; i < my2DArray.GetLength(0); i++) { 
-            //    for (int j = 0; j < my2DArray.GetLength(1); j++)
-            //    {
-            //        Console.WriteLine(my2DArray[i, j]);
-            //    }
-            
-            //}
-            //// Example 2 of 2D Array
-            //int[,] numbers = { { 1, 4, 2 }, { 3, 6, 8 } };
+            int[,] array2D = { { 5, 6, 10 }, { 9, 8, 4 } };
+            int sum = 0;
+            Console.WriteLine("The sum of the array is: " + calculateTheSumOfAllElements(array2D));
+            //Console.Write("Enter a target number: ");
+            //int target = int.Parse(Console.ReadLine());
 
-            //for (int i = 0; i < numbers.GetLength(0); i++)
+            // Call the search method and store the result
+            //var result = searchForAnElement(array2D, target);
+
+            // Check if the result is valid or not
+            //if (result == (-1, -1))
             //{
-            //    for (int j = 0; j < numbers.GetLength(1); j++)
-            //    {
-            //        Console.WriteLine(numbers[i, j]);
-            //    }
+            //    // Display a message if the target is not found
+            //    Console.WriteLine("The target number {0} is not found in the array.", target);
             //}
-
-            
+            //else
+            //{
+            //    // Display the position of the target in the array
+            //    Console.WriteLine("The target number {0} is found at row {1} and column {2} in the array.", target, result.Item1 + 1, result.Item2 + 1);
+                
         }
+
+    
+        //Example of 2d- Array
+        //int[,] my2DArray = new int[3, 2];
+        //my2DArray[0, 0] = 00;
+        //my2DArray[0, 1] = 01;
+        //my2DArray[1, 0] = 10;
+        //my2DArray[1, 1] = 11;
+        //my2DArray[2, 0] = 20;
+        //my2DArray[2, 1] = 21;
+        //Console.WriteLine(my2DArray.Length);
+        //for (int i = 0; i < my2DArray.GetLength(0); i++) { 
+        //    for (int j = 0; j < my2DArray.GetLength(1); j++)
+        //    {
+        //        Console.WriteLine(my2DArray[i, j]);
+        //    }
+
+        //}
+        //// Example 2 of 2D Array
+        //int[,] numbers = { { 1, 4, 2 }, { 3, 6, 8 } };
+
+        //for (int i = 0; i < numbers.GetLength(0); i++)
+        //{
+        //    for (int j = 0; j < numbers.GetLength(1); j++)
+        //    {
+        //        Console.WriteLine(numbers[i, j]);
+        //    }
+        //}
+
+
+    
         //Write a program that takes a 2D array of integers as input and calculates the sum of all the elements in the array. Display the sum as the output.
-        static void calculateTheSumOfAllElements()
+        static int calculateTheSumOfAllElements(int[,] array2D)
         {
             // Declare a 2D array of integers
-            int[,] array = { { 5, 6, 10 }, { 9, 8, 4 } };
+            //int[,] array2D = { { 5, 6, 10 }, { 9, 8, 4 } }; //Add in the main function
 
             int sum = 0;
 
             // First loop
-            for (int i = 0; i < array.GetLength(0); i++)
+            for (int row = 0; row < array2D.GetLength(0); row++)
             {
-                for (int j = 0; j < array.GetLength(1); j++)
+                for (int col = 0; col < array2D.GetLength(1); col++)
                 {
                     // Add the current element to the sum
-                    sum += array[i, j];
+                    sum += array2D[row, col];
                 }
             }
 
+
             // Display the sum
-            Console.WriteLine("The sum of all the elements in the 2D-Array is " + sum);
+            //Console.WriteLine("The sum of all the elements in the 2D-Array is " + sum);
+            return sum;
         }
 
         //Write a program that takes a 2D array of integers as input and calculates the average value for each row. Display the average value of each row as the output.
-        static void FindTheAverageOfEachRow()
-        {
-            int[,] array = { { 5, 6, 10 }, { 9, 8, 4 } };
+        //static double findTheAverageOfEachRow()
+        //{
+        //    int[,] array = { { 5, 6, 10 }, { 9, 8, 4 } };
 
 
+        //    double average = 0;
+        //     First loop for row
+        //    for (int row = 0; row < array.GetLength(0); row++)
+        //    {
+        //        double sum = 0;
+        //        int count = 0;
+        //        Second loop for colm
+        //        for (int col = 0; col < array.GetLength(1); col++)
+        //        {
+        //             Add the current element to the sum
+        //            sum += array[row, col];
+        //            count++; //Add count 
+        //        }
+        //        average = sum / count;
+        //        return average;
+        //         Display the average of each row 
+        //        Console.WriteLine("The average of each row in the 2D-Array: ");
+        //        Console.WriteLine("The average for row {0} is {1}", i + 1, average);
+        //    }
 
-            // First loop
-            for (int i = 0; i < array.GetLength(0); i++)
-            {
-                int sum = 0;
-                int count = 0;
+        //}
+        // Write a program that takes a 2D array of integers as input and a target number. Search for the target number in the array and display its position (row and column) if found. If the target number is not found, display a message indicating its absence.
+        //static int searchForAnElement (int[,] array2D, int target)
+        //{
+        //Console.WriteLine(array[i]);
+        //     First loop
+        //    for (int row = 0; row < array2D.GetLength(0); row++)
+        //    {
 
-                for (int j = 0; j < array.GetLength(1); j++)
-                {
-                    // Add the current element to the sum
-                    sum += array[i, j];
-                    count++; //Add count 
-                }
-                double average = (double)sum / count;
-                // Display the average of each row 
-                Console.WriteLine("The average of each row in the 2D-Array: ");
-                Console.WriteLine("The average for row {0} is {1}", i + 1, average);
-            }
 
-        }
+        //        for (int col = 0; col < array2D.GetLength(1); col++)
+        //        {
+        //            if (array2D[row, col] == target)
+        //            {
+        //                return (row, col);
+        //            }
+                   
+        //        }
+
+        //    }
+        //}
     }
     
 }
