@@ -17,19 +17,11 @@ namespace cSharp_2DArray
             //    Console.WriteLine("The average value of row {0} is {1}", i + 1, findTheAverageOfEachRow(array2D));
             //}
             // Search for number
-            Console.WriteLine(array2D);
-            Console.Write("Enter a target number: ");
-            int target = int.Parse(Console.ReadLine());
-            var result = searchForAnElement(array2D, target);
-            if (result != null)
-            {
-                Console.WriteLine("The target number " + target + " is located at row {1} and column {2}", searchForAnElement(array2D, target));
 
-            }
-            else
-            {
-                Console.WriteLine("The target {0} is not found in the array", target);
-            }
+            //int[,] transposedArray = transposeMatrix(array2D);
+            Console.WriteLine("Before transpose: "+array2D);
+            Console.WriteLine("The transposed matrix is: ");
+            Console.WriteLine("[" + String.Join(", ", transposeMatrix(array2D)) +"]");
         }
 
 
@@ -103,22 +95,43 @@ namespace cSharp_2DArray
         //Write a program that takes a 2D array of integers as input and a target number.
         //Search for the target number in the array and display its position(row and column)
         //if found.If the target number is not found, display a message indicating its absence.
-        static (int,int)? searchForAnElement(int[,] array2D, int target) //
+        //static (int,int)? searchForAnElement(int[,] array2D, int target) //
+        //{
+        //    //Console.WriteLine(array2D);
+        //    //First loop
+        //    for (int row = 0; row < array2D.GetLength(0); row++)
+        //    {
+        //        for (int col = 0; col < array2D.GetLength(1); col++)
+        //        {
+        //            if (array2D[row, col] == target)
+        //            {
+        //                 return (row + 1, col + 1);
+        //            } 
+        //        }
+        //    }
+        //    return null;
+        //}
+
+        //Write a program that takes a 2D array of integers as input and transposes the matrix.
+        //Display the transposed matrix as the output. The transpose of a matrix swaps the elements' positions across the main diagonal.
+
+        static int[,] transposeMatrix(int[,] array2D) 
         {
-            //Console.WriteLine(array2D);
-            //First loop
-            for (int row = 0; row < array2D.GetLength(0); row++)
+            int rows = array2D.GetLength(0);
+            int cols = array2D.GetLength (1);
+            int[,] transposed = new int[rows, cols];
+
+            for (int row = 0; row < rows; row++) 
             {
-                for (int col = 0; col < array2D.GetLength(1); col++)
+                for (int col = 0; col < cols; col++)
                 {
-                    if (array2D[row, col] == target)
-                    {
-                         return (row + 1, col + 1);
-                    } 
+                    transposed[col,row] = array2D[row, col];
                 }
             }
-            return null;
+            return transposed;
+
         }
+
     }
 }
     
